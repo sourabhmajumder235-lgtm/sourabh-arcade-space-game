@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourabh - Arcade Space Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <!-- HUD (Heads-Up Display) -->
+        <div class="hud">
+            <div class="hud-item">
+                <span class="label">Score:</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">Lives:</span>
+                <span class="value" id="lives">3</span>
+            </div>
+            <div class="hud-item">
+                <span class="label">Level:</span>
+                <span class="value" id="level">1</span>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen hidden">
+            <div class="screen-content">
+                <h1>GAME OVER</h1>
+                <p id="finalScore">Final Score: 0</p>
+                <button onclick="location.reload()">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <div class="screen-content">
+                <h1>🚀 SOURABH'S SPACE ARCADE 🚀</h1>
+                <p>Dodge enemies, collect power-ups, and survive the cosmic chaos!</p>
+                <div class="controls-info">
+                    <p><strong>Controls:</strong></p>
+                    <p>← → Arrow Keys or A/D to Move</p>
+                    <p>SPACE to Shoot</p>
+                    <p>P to Pause/Resume</p>
+                </div>
+                <button onclick="startGame()">START GAME</button>
+            </div>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pauseScreen" class="screen hidden">
+            <div class="screen-content">
+                <h1>PAUSED</h1>
+                <p>Press P to Resume</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
